@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+:root {
+  /* --background-color: #fef2dc; */
+  /* --primary-color: #e0acf7; */
+  /* --secondary-color: #46627f; */
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./material.png), #18261F;
+
+}
+
+.searchBar {
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50px;
+  background: url(./wooden-texture.png) center center/cover;
+  box-shadow: 5px 7px 7px rgba(0, 0, 0, 0.8),
+    5px -4px 10px rgba(0, 0, 0, 0.7),
+    -2px 0px 1px rgba(0, 0, 0, 0.4),
+    0px -2px 1px rgba(0, 0, 0, 0.4),
+    0px 2px 1px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  filter: brightness(150%);
+  position: relative;
+}
+
+.searchBar__title {
+  color: #8b3f10;
+  font-size: 18px;
+  margin-left: 20px;
+  font-weight: bold;
+  text-shadow: 0px -2px 2px rgba(0, 0, 0, 1);
+}
+
+.searchBar__text {
+  width: 68%;
+  padding: 10px 25px;
+  border-radius: 50px 0 0 50px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: inset 0px 7px 10px rgba(0, 0, 0, 0.8),
+    inset 30px 0px 15px rgba(0, 0, 0, 0.5),
+    inset -15px 10px 15px rgba(0, 0, 0, 0.5),
+    inset 0px -2px 2px rgba(0, 0, 0, 0.4),
+    inset 0px 2px 1px rgba(0, 0, 0, 0.4),
+    0px 2px 1px rgba(0, 0, 0, 0.4),
+    0px -2px 1px rgba(0, 0, 0, 0.4),
+    -2px 0px 1px rgba(0, 0, 0, 0.4);
+  z-index: -2;
+  margin-left: 20px;
+  color: #808080;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.searchBar__btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.searchBar__btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: url(./material.png), #18261F;
+  z-index: -1;
+  border-radius: inherit;
+  box-shadow: inset -5px -12px 20px rgba(0, 0, 0, 0.6),
+    inset 0px 0px 3px rgba(255, 255, 255, 0.5),
+    inset 0px 5px 10px rgba(255, 255, 255, 0.1),
+    2px 2px 4px rgba(0, 0, 0, 1),
+    -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.searchBar__btn::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 128%;
+  height: 128%;
+  background: url(./wooden-texture.png) center;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8),
+    1px -4px 10px rgba(0, 0, 0, 0.5),
+    inset 0px 5px 2px rgba(255, 255, 255, 0.068),
+    inset 0px 0px 10px rgba(0, 0, 0, 0.514);
+
+
+}
+
+
+.searchBar__btn i {
+  font-size: 26px;
+  color: #8b3f10;
+  text-shadow: 0px -2px 2px rgba(0, 0, 0, 1);
+}
+
+.searchBar__btn:active::after {
+  transform: translate(-50%, -50%) scale(0.95);
+  transition: all 0.1s;
+
+}
+
+.searchBar__btn:active i {
+  transform: scale(0.95);
+  transition: all 0.1s;
+
+}
